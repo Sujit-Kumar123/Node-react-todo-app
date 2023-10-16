@@ -1,0 +1,607 @@
+.App {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    color: black;
+    background: #EDF0F8;
+  }
+  /*Navbar CSS */
+  .nav {
+  height: 80px;
+  width: 1280px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 255, 0.7);
+  border-bottom: 0.06rem solid rgba(0, 0, 0, 0.1);
+  }
+  .nav-head {
+    padding-left: 120px;
+    color: white;
+    margin-top: -10px;
+    text-decoration: none;
+  }
+  .menu {
+    margin-top: 5px;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    margin-right: 130px;
+    gap: 30px;
+  }
+  .menu .menu-btn a {
+    margin-top: 10px;
+    color:white;
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .menu .menu-btn a:hover {
+    background-color: rgb(76, 181, 223);
+    color: white;
+    box-shadow: 2px 4px 4px #fcf7f7;
+  }
+  /*Home search*/
+  .con {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+    
+  }
+  .search-container {
+    display: flex;
+    height: 220px;
+    width: 100%;
+    justify-content: center;
+    background-image: linear-gradient(to top, rgb(99, 201, 194), rgba(0, 0, 255, 0.77),  rgba(0, 0, 255, 0.7));
+  }
+  .search-input {
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    height: 25px;
+    margin: 40px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  .search-input:hover {
+    background-color: white;
+    box-shadow: 2px 4px 4px aqua;
+  }
+  /*Grid and List View*/
+  .gridListIcon{
+    position: absolute;
+    float: right;
+    display: flex;
+    margin:30px;
+    margin-left: 1100px;
+  }
+  .gridListIcon a{
+    text-decoration: none;
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    left: 0px;
+    top: 0px;
+  
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+   /* color: white;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin: 2px;*/
+  }
+  .gridListIcon a:hover{
+    color:rgb(35, 32, 32);
+    background-color:white;
+  }
+  .posts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .transitionPost{
+    margin-top: -120px;
+  }
+  .post-container {
+  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; 
+  }
+  .homePagination {
+    align-items: center;
+    justify-content: center;
+    margin: 10% 5%;
+    margin-bottom: 5px;
+  }
+  
+  /*POST*/
+  .post-link {
+    
+    text-decoration: none;
+    
+  }
+  .blog {
+    background: #FFFFFF;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out;
+    width: 360px;
+    height: 380px;
+    margin: 5px;
+    color: #000d12;
+    box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.08);
+  }
+  .blog:hover {
+    transform: scale(1.08);
+    box-shadow: 2px 8px 8px black;
+  }
+  .blog-image {
+    width: 95%;
+    height: 200px;
+    margin: 10px 10px;
+  }
+  .blog-image:hover{
+    
+  }
+  .blog-title {
+    text-align: center;
+    padding: 0px 8px;
+    height: 200px;
+    overflow: hidden;
+    padding-bottom: 25px;
+  }
+  .blog-title h2 {
+    
+  
+  }
+  .blog-title p {
+    
+    overflow: hidden;
+  }
+  /*List View*/
+  .listViewContainer{
+    width: 80%;
+    height: auto;
+    background-color:#FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0% 10%;
+  }
+  .listViewContainer table tr{
+    border-bottom: 0.1rem solid rgb(123, 120, 120);
+  }
+  .listViewContainer table tr th{
+     padding:15px 60px;
+     color: rgb(67, 58, 58);
+  }
+  .listViewData td{
+   padding:20px 58px;
+  }
+  .listViewImage{
+    height: 70px;
+    width: 70px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .listViewDescription{
+    height: 20px;
+    overflow: hidden;
+    
+  }
+   table tr td a{
+    text-decoration: none;
+  }
+  /*Details CSS*/
+  
+  .detail-post-container {
+    
+  }
+  
+  .detail-btn-p {
+    text-align: center;
+    gap: 100px;
+  }
+  .detail-btn-p button:hover {
+    box-shadow: 2px 5px 5px black;
+  }
+  .detail-btn-p button a{
+    text-decoration: none;
+    color: white;
+  }
+  .detail-post-container button {
+    height: 30px;
+    padding: 4px;
+    width: 100px;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    margin: 50px;
+  }
+  .title-description {
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+  }
+  .title-description h2 {
+    text-align: left;
+    padding-left: 250px;
+    
+  }
+  .detail-div-image {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80vh;
+    align-items: center;
+    margin: 100px;
+    margin-left: 350px;
+  }
+  .detail-image {
+    height: 50%;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 2px 6px 6px black;
+  }
+  .detail-image:hover {
+    transform: scale(1.04);
+  }
+  .detail-blog-content {
+    margin: 20px 210px;
+  }
+  
+  /*Add post form CSS*/
+  .form-container {
+    width: 100%;
+    height: 90.3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .form-container form {
+    background-color: #000d12;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 10px;
+  
+  }
+  .form-container form:hover {
+    box-shadow: 2px 8px 10px black;
+  }
+  .form-container form h2 {
+    color: brown;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .form-container form input {
+    height: 30px;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 15px;
+  }
+  .form-container form textarea {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 15px;
+    overflow: hidden;
+  }
+  .form-container form button {
+    height: 30px;
+    padding: 4px;
+    width: 100px;
+    align-items: center;
+    margin-left: 110px;
+    cursor: pointer;
+    background-color: aqua;
+    border: none; 
+    border-radius: 7px;
+  }
+  .form-container form button:hover {
+    box-shadow: 2px 3px 3px aqua;
+  }
+  /*Comment On Post*/
+  .commentOnPost {
+    margin-left: auto;
+    margin-right: auto;
+    float: calc();
+    height: auto;
+    width: 60%;
+    text-align: left;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 2px 3px 3px 2px black;
+  }
+  .commentHead{
+    font-style: italic;
+  }
+  .selectAll{
+    float: right;
+  }
+  .commentHead button{
+    font-style: italic;
+    margin: 0px;
+    float: right;
+  }
+  .commentArea {
+    border-radius: 0.567rem;
+    padding-bottom: 0px;
+  }
+  .commentArea textarea {
+    width: 100%;
+    padding: 5px;
+    border: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: rgb(208, 192, 192);
+    box-shadow: 2px 3px 3px 2px black;
+    
+  }
+  .commentArea textarea:focus {
+    border: none;
+    outline: none;
+    background-color: aliceblue;
+  }
+  .commentArea button {
+    width: auto;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 3px;
+    background-color: rgb(208, 192, 192);
+  }
+  .commentArea button:hover {
+    background-color: white;
+    box-shadow: 2px 3px 3px 2px black;
+  }
+  .comments {
+    border: none;
+    padding: 7px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 10px 0px;
+    box-shadow: 2px 3px 3px 2px black;
+    position: relative;
+    
+  }
+  .comments:hover {
+    background-color: rgb(208, 192, 192);
+  }
+  .dateOfComment {
+    margin-left: 30px;
+  }
+  
+  .blogMessage {
+    font-family: sans-serif;
+    
+    font-size: 14px;
+    margin-left: 20px;
+  }
+  .commentUserName {
+    font-family: Arial, Helvetica, sans-serif;
+  
+    font-size: 15px;
+  }
+  .deleteComment{
+    margin: 0px;
+    align-self: center;
+  }
+  .deleteComment a{
+  text-decoration: none;
+  background-color: rgb(221, 1, 1);
+  padding: 4px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: black;
+  }
+  .checkBox{
+    position: initial;
+    float: right;
+    margin-bottom: 5px;
+  }
+  .bellIcon{
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    
+  }
+  /*Notification*/
+  .dropDownField::-webkit-scrollbar {
+    display: none;
+  }
+  .dropDownField{
+    position: absolute;
+    top: 4rem;
+    right: auto;
+    width: 15%;
+    max-width: 30%;
+    margin-right: 20%;
+    border: 0.1rem solid black;
+    margin-left: -5%;
+    background-color:white;
+    box-shadow: 2px 3px 3px 2px black;
+    border-radius: 10px;
+    max-height: 50%;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .notificationCount{
+    position: absolute;
+    background-color: red;
+    color: white;
+    transform: translateY(-50px);
+    border-radius: 50%;
+    text-align: center;
+    float: right;
+    height: auto;
+    width: auto;
+  }
+  .dropDownField a{
+    text-decoration: none;
+    padding-left: 10px;
+    
+  }
+  .markedAsRead{
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5% 20%;
+    padding-bottom: 2rem;
+    position: relative;
+  }
+  .markedAsRead button{
+    font-size: 12px; 
+  }
+  .blogNotification{
+    border: none;
+    border-radius: 5px;
+    border-bottom: 0.1rem solid black;
+    text-align: center;
+  }
+  .blogNotification p{
+  font-size: 14px;
+  text-align: left;
+  margin-left: 10px;
+  color: rgb(12, 11, 11);
+  }
+  /*Profile*/
+  .userProfileIcon{
+    box-shadow:2px 2px 2px 2px black ;
+    
+  }
+  .profileIcon{
+      height: 50px;
+      border-radius: 50px;
+      display: flex; 
+      padding: 5px;
+      margin-left: 5px;
+  }
+  .userProfileIcon h5{
+    position: relative;
+    float: right;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-right: 12px;
+  }
+  .profileBlock{
+    margin-top: 20px;
+  }
+  /*MY ACCOUNT*/
+  .myAccount{
+    margin: 50px;
+    min-height: 90%;
+    width: 90%;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 2px 2px 10px 2px ;
+  }
+  .myAccount h3{
+    margin-left: 10%;
+  }
+  .myProfileSide{
+    border-right: 0.1rem solid rgb(80, 75, 75);
+  }
+  .profilePicture{
+   padding: 10px;
+   align-items: center;
+  }
+  .profilePicture img{
+    height: 100%;
+    width: 100%;
+    display: flex; 
+  }
+  .profileContent{
+    margin: 5px;
+    text-align: center;
+  }
+  .profileContentList ul li{
+    width: 100%;
+    height: 40px;
+  }
+  .profileContentList ul li:hover{
+    background-color: rgb(211, 238, 237);
+  }
+  ul{
+    list-style-type: none;
+    
+  }
+  
+  ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    padding-top: 20px;
+  }
+  .changePassword form{
+    position: relative;
+    margin-left: 15%;
+    width: 50%;
+    justify-content: center;
+    border: none;
+    align-items: center;
+    padding:7%;
+    background-color: #000d12;
+    border-radius:2px 2px 10px 2px ;
+    box-shadow: 2px 2px 2px 2px black;
+  }
+  .changePassword form input{
+    position: relative;
+    margin: 20px;
+    align-items: center;
+    border: none;
+    border-radius: 2px;
+    height: 30px;
+    width:100%;
+    
+  }
+  .changePassword form button{
+    align-items: center;
+    margin: 5% 25%;
+  }
+  /*New User Registration form*/
+  .regContainer{
+    position: relative;
+    width:100vh ;
+    
+  }
+  .registrationLogo{
+    position: relative;
+    width: 640%;
+    left: 0px;
+    height: 600px;
+    
+    background-image: linear-gradient(to top, rgb(99, 201, 194), rgba(0, 0, 255, 0.77),  rgba(0, 0, 255, 0.7));
+  }
+  .registration{
+    position: relative;
+    background-color: #FFFFFF;
+    right: 0px;
+    width: 460px;
+    float: right;
+    
+  }
