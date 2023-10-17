@@ -266,14 +266,14 @@ color: rgb(67, 63, 63);
   justify-content: center;
   background-image: linear-gradient(to top, rgb(99, 201, 194,0.7), rgba(0, 41, 255, 0.7),  rgba(0, 41, 255, 0.7));
 }
-.search-container h5 a{
+.search-container h6 a{
   position: absolute;
   right: 94.3%; 
-  margin-top: 40px;
+  margin-top: 30px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 36px;
   color: #FFFFFF;
   text-decoration: none;
@@ -308,7 +308,7 @@ color: #828282;
 position: absolute;
 height: 40px;
 width: 50px;
-left: 52.25%;
+left: 52.85%;
 top: 20px;
 margin-top: 20px;
 margin-left: 57px;
@@ -659,7 +659,7 @@ margin-left: 30px;
   overflow: hidden;
 }
 .firstCol{
-  width: 800px;
+  width: 700px;
   overflow: hidden;
 }
 .listViewData td:nth-child(1) span:nth-child(1){
@@ -758,8 +758,9 @@ flex-grow: 0;
   line-height: 18px;
   /* identical to box height, or 100% */
   color: #000000;
-  width: 40px;
+  width: 20px;
   overflow: hidden;
+  padding-left: 10px;
 }
 .listViewImage{
   height: 70px;
@@ -807,7 +808,7 @@ height: 30px;
 }
 /*Details CSS*/
 .detail-post-container {
-  
+  background-color: #EDF0F8;
 }
 
 .detail-btn-p {

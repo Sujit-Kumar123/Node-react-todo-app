@@ -22,8 +22,8 @@ function UserSignIn() {
       axios
         .post("http://localhost:8001/login", jsonData)
         .then((response) => {
-          //console.log(response.data);
-          let data = { email: email, token: response.data.token };
+          console.log("GGGGGGGGGGGGGGGGGGGGGGGGG",response.data);
+          let data = {token: response.data.accessToken };
           localStorage.setItem("blogToken", JSON.stringify(data));
           //navigate("/addPost");
           navigate("/"); 
@@ -86,7 +86,7 @@ function UserSignIn() {
           }}
         >
             <div className="registrationLogoHome">
-              <Link to="/">
+              <Link to="/login">
                 <p>
                   <img
                     src={process.env.PUBLIC_URL + "./Rectangle 6home.png"}

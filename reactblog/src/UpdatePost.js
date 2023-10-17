@@ -10,10 +10,12 @@ function Update(props) {
   const [descriptions, setDescriptions] = useState("");
   const [image, setImage] = useState();
   const navigate = useNavigate();
+  console.log("first",)
   useEffect(() => {
     axios
-      .get(`http://localhost:8001/update_todo_by_id?_id=${_id}`)
+      .get(`http://localhost:8001/gettodo_by_id?_id=${_id}`)
       .then((res) => {
+        console.log("first",res.data)
         setTitle(res.data.title);
         //console.log(res.data[0])
         setDescriptions(res.data.desctiption);
@@ -27,14 +29,13 @@ function Update(props) {
 
   //Update code
   const handleUpdate = (_id) => {
-    const formData = new FormData();
-    formData.append("title", title);
-    formData.append("descriptions", descriptions);
-    formData.append("image", image);
-    formData.append("id", _id);
-    formData.append("_method", "PUT");
+    const formData ={
+      title:title,
+      descriptions:descriptions,
+    }
+
     axios
-      .post(`http://localhost:8001/update_todo_by_id?_id=${_id}`, formData)
+      .put(`http://localhost:8001/update_todo_by_id?_id=${_id}`, formData)
       .then((res) => {
         navigate(`/read/${_id}`);
         Swal.fire({
@@ -80,12 +81,12 @@ function Update(props) {
           required
         ></input>
         <br />
-        <input
+        {/* <input
           type="file"
           name="image"
           onChange={(e) => setImage(e.target.files[0])}
         ></input>
-        <br />
+        <br /> */}
         <button className="newblog-btn">Submit</button>
       </form>
     </div></>

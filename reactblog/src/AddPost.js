@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 
 export default function AddPost() {
   const [title,setTitle]=useState();
-  const [userEmail,SetUserEmail]=useState()
+  const [userToken,SetUserToken]=useState()
   const [descriptions,setDescriptions]=useState();
   const [isLogIn,setLogIn]=useState(false)
   const navigate=useNavigate();
@@ -17,17 +17,15 @@ export default function AddPost() {
     const storedToken=JSON.parse(localStorageData);
     //console.log(storedToken);
     setLogIn(true);
-    SetUserEmail(storedToken.email);
+    SetUserToken(storedToken.token);
     }},[])
   const handleSubmisson= (e)=>{
    const formData={
-      email:userEmail,
       title:title,
-      descriptions:descriptions
+      description:descriptions
     }
-console.log(formData)
-    axios.post("http://localhost:8001/addtodo",formData,{
-    })
+console.log(formData,userToken)
+    axios.post(`http://localhost:8001/addtodo/?token=${userToken}`,formData)
     .then((result)=>{
       console.log(result.data)
       Swal.fire({

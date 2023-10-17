@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import Post from "./Post";
 import ListView from "./Componet/ListView";
 
@@ -19,6 +19,9 @@ export default function Pagination() {
   const [selectBlogPerPage,setSelectBlogPerPage]=useState(9)
   const localStorageData=localStorage.getItem("blogToken");
   const storedToken=JSON.parse(localStorageData);
+  const navigate = useNavigate();
+
+      
   //console.log(storedToken);
 
   const maxPageLimit=2;
@@ -31,16 +34,19 @@ export default function Pagination() {
   //Pagination for blogs
 //console.log(selectBlogPerPage)
 useEffect(() => {
+  if (localStorageData===null){
+    navigate("/login");
+  }
   // Construct the query parameters as an object
   const queryParams = {
-    email: storedToken.email,
     page: currentPage,
     limit: selectBlogPerPage,
+    token: storedToken.token,
   };
 
   // Convert the queryParams object to a query string
   const queryString = new URLSearchParams(queryParams).toString();
-
+  console.log("first",queryString)
   // Make the GET request with the query string
   axios
     .get(`http://localhost:8001/gettodo?${queryString}`)
@@ -123,7 +129,7 @@ const handleSelectedChange =(e)=>{
   return (
     <div className="con">
       <div className="search-container">
-        <h5><Link to="/" >Todo List</Link></h5>
+        <h6><Link to="/" >Todo List</Link></h6>
         <input
           type="text"
           placeholder="Search"

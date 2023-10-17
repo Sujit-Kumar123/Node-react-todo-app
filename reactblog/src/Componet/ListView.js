@@ -11,12 +11,12 @@ const ListView = ({ blog, currPage, blogPerPage }) => {
               src={process.env.PUBLIC_URL + "./image/Arrow 1Up.png"}
               alt=""
             ></img>
-            </span><span className="">IMAGE-TITLE</span> 
+            </span><span className="">TITLE</span> 
             </th>
           
           <th>DESCRIPTIONS</th>
           <th>CATEGORY</th>
-          <th>TAGS</th>
+          {/* <th>TAGS</th> */}
           <th>ACTION</th>
         </tr>
         {blog.map((blo, i) => (
@@ -29,7 +29,7 @@ const ListView = ({ blog, currPage, blogPerPage }) => {
                   src={process.env.REACT_APP_API_KEY_GET_IMAGE + blo.image}
                   alt=""
                 ></img> */}
-              <span className="listViewFirstColTitle">  { blo.title}
+              <span className="listViewFirstColTitle">{ blo.title}
                 </span>
               </td>
               <td>
@@ -41,7 +41,7 @@ const ListView = ({ blog, currPage, blogPerPage }) => {
                   <option>Ok</option>
                 </select>
               </td>
-              <td className="tags">
+              {/* <td className="tags">
                 <span>Wordpress Plugins</span>
                 <span> Discount</span>
                 <span> e-commerce <br></br></span>
@@ -53,17 +53,17 @@ const ListView = ({ blog, currPage, blogPerPage }) => {
                 <img src={process.env.PUBLIC_URL+"./image/Ellipse 12Tag.png"} alt=""></img>
                 <img src={process.env.PUBLIC_URL+"./image/Ellipse 13Tag.png"} alt=""></img>
                 </span>
-              </td>
+              </td> */}
               <td className="action">
-                <Link to={`/read/${blo.id}`}>
+                <Link to={`/read/${blo._id}`}>
                 <img className="pen" src={process.env.PUBLIC_URL+"./image/VectorPen.png"} alt=""></img>
                   <img src={process.env.PUBLIC_URL+"./image/VectorEdit.png"} alt=""></img>
                 </Link>
-                <Link to={`/read/${blo.id}`}>
+                <Link to={`/read/${blo._id}`}>
                 <img className="downloadHead" src={process.env.PUBLIC_URL+"./image/VectorDownloadHead.png"} alt=""></img>
                   <img src={process.env.PUBLIC_URL+"./image/VectorDownload.png"} alt=""></img>
                 </Link>
-                <Link to={`/read/${blo.id}`}>
+                <Link to={`/read/${blo._id}`}>
                   <img src={process.env.PUBLIC_URL+"./image/VectorDelete.png"} alt=""></img>
                 </Link>
               </td>

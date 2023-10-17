@@ -7,7 +7,7 @@ function Post({ blog }) {
   const handleNavigate=()=>{
     navigate(`/read/${blog._id}`)
   }
-  console.log("first",blog._id)
+  // console.log("first",blog._id)
   return (
     <Link to={`/read/${blog._id}`} className="post-link">
       <div className="blog">

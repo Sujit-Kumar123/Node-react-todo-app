@@ -11,7 +11,7 @@ const Account = ({ show, picture, name, email }) => {
     if (localStorage.getItem("blogToken")) {
       const localStorageData = localStorage.getItem("blogToken");
       const storedToken = JSON.parse(localStorageData);
-      const token = storedToken.email;
+      const token = storedToken.token;
       console.log(token)
       const config = {
           authorization: token,
@@ -23,7 +23,7 @@ const Account = ({ show, picture, name, email }) => {
         .then((res) => {
           //console.log(res);
           localStorage.removeItem("blogToken");
-          navigate("/");
+          navigate("/login");
           Swal.fire({
             position: "top-end",
             icon: "success",
