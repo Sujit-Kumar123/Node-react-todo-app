@@ -1,2 +1,2 @@
 # Node-react-todo-app
-# Please check out to updatedtodoapp
+# Please check out to updateTodoapp
