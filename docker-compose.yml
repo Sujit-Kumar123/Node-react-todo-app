@@ -1,0 +1,27 @@
+version: "27.0.3"
+services:
+  backend:
+    build: ./backend
+    environment:
+      - GENERATE_SOURCEMAP=false
+    ports:
+      - "8001:8001"
+    volumes:
+      - logs:/app/logs
+      - ./backend:/app
+      - /app/node_modules
+  frontend:
+    build: ./reactblog
+    environment:
+      - GENERATE_SOURCEMAP=false
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./reactblog/src:/app/src
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+volumes:
+  data:
+  logs:
