@@ -4,7 +4,8 @@ const cors=require('cors');
 const auth=require('./controlers/userControllers');
 const todo=require('./controlers/todoControllers');
 require('dotenv').config();
-const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@cluster0.gnrh4jm.mongodb.net/todo_app?retryWrites=true&w=majority`;
+// const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@cluster0.gnrh4jm.mongodb.net/todo_app?retryWrites=true&w=majority`;
+const uri = process.env.MONGO_URI || 'mongodb://mongodb:27017/todo_app';
 const connectionParams={
     useNewUrlParser: true,
     useUnifiedTopology: true,
